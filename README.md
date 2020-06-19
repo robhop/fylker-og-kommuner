@@ -1,5 +1,5 @@
-# fykler-og-kommuner
-## Norske Fyker og Kommuner 2020
+# fylker-og-kommuner
+## Norske Fylker og Kommuner 2020
 
 * Topojson og Geojson format
 * 3 forskjellige kvaliteter
