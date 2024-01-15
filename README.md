@@ -1,5 +1,5 @@
 # fylker-og-kommuner
-## Norske Fylker og Kommuner 
+## Norske fylker og kommuner 
 
 * Kart over Norge, fylker og kommuner
 * Oppdatert 2024
