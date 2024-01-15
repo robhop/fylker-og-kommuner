@@ -10,7 +10,7 @@
 echo "Generate Norge.geojson"
 #node generate-norge.js
 npx geo2topo -q 1e8 temp/full/Norge.geojson > temp/full/Norge.topojson
-npx toposimplify -F -P 0.01 -o "../Norge-S.topojson" "temp/full/Norge.topojson"
+npx toposimplify -F -P 0.02 -o "../Norge-S.topojson" "temp/full/Norge.topojson"
 npx topo2geo Norge=../Norge-S.geojson < ../Norge-S.topojson
 npx toposimplify -F -P 0.05 -o "../Norge-M.topojson" "temp/full/Norge.topojson"
 npx topo2geo Norge=../Norge-M.geojson < ../Norge-M.topojson
@@ -22,7 +22,7 @@ mkdir -p temp/full/fylker
 #node generate-fylker.js
 #npx geojson-merge temp/full/fylker/*.geojson > temp/full/Fylker.geojson
 npx geo2topo -q 1e8 temp/full/Fylker.geojson > temp/full/Fylker.topojson
-npx toposimplify -F -P 0.01 -o "../Fylker-S.topojson" "temp/full/Fylker.topojson"
+npx toposimplify -F -P 0.02 -o "../Fylker-S.topojson" "temp/full/Fylker.topojson"
 npx topo2geo Fylker=../Fylker-S.geojson < ../Fylker-S.topojson
 npx toposimplify -F -P 0.05 -o "../Fylker-M.topojson" "temp/full/Fylker.topojson"
 npx topo2geo Fylker=../Fylker-M.geojson < ../Fylker-M.topojson
@@ -34,7 +34,7 @@ mkdir -p temp/full/kommuner
 #node generate-kommuner.js
 #npx geojson-merge temp/full/kommuner/*.geojson > temp/full/Kommuner.geojson
 npx geo2topo -q 1e8 temp/full/Kommuner.geojson > temp/full/Kommuner.topojson
-npx toposimplify -F -P 0.01 -o "../Kommuner-S.topojson" "temp/full/Kommuner.topojson"
+npx toposimplify -F -P 0.02 -o "../Kommuner-S.topojson" "temp/full/Kommuner.topojson"
 npx topo2geo Kommuner=../Kommuner-S.geojson < ../Kommuner-S.topojson
 npx toposimplify -F -P 0.05 -o "../Kommuner-M.topojson" "temp/full/Kommuner.topojson"
 npx topo2geo Kommuner=../Kommuner-M.geojson < ../Kommuner-M.topojson
