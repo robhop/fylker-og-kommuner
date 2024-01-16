@@ -1,28 +1,19 @@
-import utf8 from 'utf8';
-import fgdb from 'fgdb';
 import * as fs from 'node:fs';
 import * as turf from '@turf/turf';
-import * as polyclip from "polyclip-ts"
+import utf8 from 'utf8';
 
+const kommuner = JSON.parse(fs.readFileSync('temp/kommuner2024.geojson', 'utf8'));
 const norge = JSON.parse(fs.readFileSync('temp/full/Norge.geojson', 'utf8'));
 
-fgdb('temp/Basisdata_0000_Norge_25833_Kommuner_FGDB.gdb').then(function (objectOfGeojson) {
-    objectOfGeojson.kommune.features.forEach(element => {
-        var polygon = turf.multiPolygon(polyclip.intersection(
-            element.geometry.coordinates,
-            norge.features[0].geometry.coordinates));
-
-        polygon.properties = {
+var outFeatures = kommuner.features.map(element => {
+        var intersect = turf.intersect(element, norge.features[0]);
+        intersect.properties = {
             "id": element.properties.kommunenummer,
             "kommunenummer": element.properties.kommunenummer,
             "name": utf8.decode(element.properties.kommunenavn),
             "kommunenavn": utf8.decode(element.properties.kommunenavn),
         };
-        console.log(polygon.properties.kommunenavn);
-        fs.writeFileSync("temp/full/kommuner/" + polygon.properties.id + ".geojson", JSON.stringify(turf.featureCollection([polygon])));
-
-    });
-    console.log("DONE");
-}, function (error) {
-    console.log(error);
+        console.log(intersect.properties.kommunenavn + " " + intersect.properties.kommunenummer);
+        return intersect
 });
+fs.writeFileSync("temp/full/Kommuner.geojson", JSON.stringify(turf.featureCollection(outFeatures)));

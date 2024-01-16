@@ -2,21 +2,20 @@ import * as fs from 'node:fs';
 import * as turf from '@turf/turf';
 import * as polyclip from "polyclip-ts"
 
-const mask_string = fs.readFileSync('temp/fylker2021-WGS84.geojson', 'utf8');
-const maskn = JSON.parse(mask_string);
+const fylker = JSON.parse(fs.readFileSync('temp/fylker2021.geojson'));
 
 var clipped = polyclip.union(
-    maskn.features[0].geometry.coordinates,
-    maskn.features[1].geometry.coordinates,
-    maskn.features[2].geometry.coordinates,
-    maskn.features[3].geometry.coordinates,
-    maskn.features[4].geometry.coordinates,
-    maskn.features[5].geometry.coordinates,
-    maskn.features[6].geometry.coordinates,
-    maskn.features[7].geometry.coordinates,
-    maskn.features[8].geometry.coordinates,
-    maskn.features[9].geometry.coordinates,
-    maskn.features[10].geometry.coordinates
+    fylker.features[0].geometry.coordinates,
+    fylker.features[1].geometry.coordinates,
+    fylker.features[2].geometry.coordinates,
+    fylker.features[3].geometry.coordinates,
+    fylker.features[4].geometry.coordinates,
+    fylker.features[5].geometry.coordinates,
+    fylker.features[6].geometry.coordinates,
+    fylker.features[7].geometry.coordinates,
+    fylker.features[8].geometry.coordinates,
+    fylker.features[9].geometry.coordinates,
+    fylker.features[10].geometry.coordinates
 );
 
 var poly = turf.multiPolygon(clipped, { "name": "Norge" });
