@@ -4,6 +4,8 @@ import * as polyclip from "polyclip-ts"
 
 const fylker = JSON.parse(fs.readFileSync('temp/fylker2021.geojson'));
 
+console.log("Norge:" + fylker.features.length);
+
 var clipped = polyclip.union(
     fylker.features[0].geometry.coordinates,
     fylker.features[1].geometry.coordinates,

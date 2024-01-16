@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mapbox/geojson-merge": "^1.1.1",
     "@turf/turf": "^6.5.0",
     "fgdb": "^1.0.0",
     "node-jq": "^4.2.2",
