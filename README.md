@@ -1,8 +1,10 @@
 # fylker-og-kommuner
-## Norske Fylker og Kommuner 2020
+## Norske fylker og kommuner 
 
+* Kart over Norge, fylker og kommuner
+* Oppdatert 2024
+* Basert på [Kartverkets data](https://kartkatalog.geonorge.no) 
 * Topojson og Geojson format
-* 3 forskjellige kvaliteter
+* 3 forskjellige kvaliteter L, M, og S
 * Klippet etter kystlinje
-* Basert på https://kartkatalog.geonorge.no/metadata/cbbdf78c-fa3a-48bf-8f3f-9eec74e428fd
-* Forenklet og konvertert til WGS 84 så det kan brukes på nettet uten å endres
+* Forenklet og konvertert til WGS84 
