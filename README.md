@@ -7,4 +7,4 @@
 * 3 forskjellige kvaliteter L, M, og S
 * Klippet etter kystlinje
 
-* Norge Topojson [S](Norge-S.topojson) [M](Norge-M.topojson) [L](Norge-M.topojson)
+* Norge Topojson [S](https://github.com/robhop/fylker-og-kommuner/blob/main/Norge-S.topojson) [M](https://github.com/robhop/fylker-og-kommuner/blob/main/Norge-M.topojson) [L](https://github.com/robhop/fylker-og-kommuner/blob/main/Norge-L.topojson)
