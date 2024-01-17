@@ -7,4 +7,5 @@
 * Topojson og Geojson format
 * 3 forskjellige kvaliteter L, M, og S
 * Klippet etter kystlinje
-* Forenklet og konvertert til WGS84 
+
+* Norge Topojson [S](Norge-S.topojson) [M](Norge-M.topojson) [L](Norge-M.topojson)
