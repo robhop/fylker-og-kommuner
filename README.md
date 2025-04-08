@@ -2,7 +2,7 @@
 
 * Kartdata av Norge, fylker og kommuner
 * Oppdatert 2024
-* Basert på [Kartverkets data](https://kartkatalog.geonorge.no) 
+* Basert på [Kartverkets data](https://kartkatalog.geonorge.no) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 * Topojson og Geojson format
 * 3 forskjellige kvaliteter S, M, og L
 * Klippet etter kystlinje
